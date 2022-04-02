@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="connexion.css">
+	<script src="connexion.js"></script>
+
+<div id="google_translate_element" ></div>
+		<script type="text/javascript">
+		function googleTranslateElementInit() {
+ 		 new google.translate.TranslateElement({
+  		pageLanguage: 'fr',
+  		includedLanguages:'en'
+  		}, 'google_translate_element');
+  		setTimeout(function(){
+  		var select = document.querySelector('select.goog-te-combo');
+  		select.value    = "en"; 
+  		select.dispatchEvent(new Event('change'));
+  		},1000)
+		}
+		</script>
+
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+</head>
+<body>
+
+
+<div class="container">
+		<form class="registration">
+		<h1>Inscription</h1>
+<label for="username">
+		<span>Pseudo</span>
+		<input type="text" id="username" minlength="3" required>
+
+			<ul class="input-requirements">
+				<li>3 caractères minimum</li>
+				<li>Doit contenir que des chiffres et des lettres</li>
+			</ul>
+</label>
+
+<label for="mail">
+			<span>Mail</span>
+			<input type="text" id="username" minlength="3" required>
+
+				<ul class="input-requirements">
+					<li>3 caractères minimum</li>
+					<li>Doit contenir le caractère "@"</li>
+				</ul>
+</label>
+
+
+<label for="password">
+			<span>Mot de passe</span>
+			<input type="password" id="password" maxlength="100" minlength="8" onkeyup='check();'required>
+
+				<ul class="input-requirements">
+					<li>Minimum 8 caractères (et moins de 100 caractères)</li>
+					<li>Doit contenir au moins 1 chiffre</li>
+					<li>Doit contenir au moins une lettre miniscule</li>
+					<li>Doit contenir au moins une lettre majuscule</li>
+					<li>Doit contenir un caractère spécial (e.g. @ !)</li>
+				</ul>
+</label>
+
+<label for="password_repeat">
+			<span>Confirmer le mot de passe</span>
+			<input type="password" id="password_repeat" maxlength="100" minlength="8" onkeyup='check();' required>
+			<span id="message"></span>
+</label>
+			
+
+			<br>
+
+			<button class="btnn"><a href="index.html">Envoyer</a></button>
+
+		</form>
+</div>
+</body>
+</html>
